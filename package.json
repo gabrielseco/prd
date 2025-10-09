@@ -1,0 +1,24 @@
+{
+  "name": "rogal",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "prd": "./index.ts"
+  },
+  "scripts": {
+    "build": "bun build ./index.ts --outdir ./dist --target bun --minify",
+    "start": "bun run ./dist/index.js",
+    "dev": "bun run index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.65.0",
+    "@octokit/rest": "^22.0.0"
+  }
+}
